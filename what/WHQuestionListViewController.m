@@ -7,6 +7,7 @@
 //
 
 #import "WHQuestionListViewController.h"
+#import "WHQuestionViewController.h"
 #import "WHAppDelegate.h"
 #import "Question.h"
 
@@ -104,12 +105,6 @@
     
     return cell;
 }
-
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    return @"Questions";
-}
-
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
@@ -152,7 +147,7 @@
 }
 */
 
-/*
+
 #pragma mark - Table view delegate
 
 // In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
@@ -160,14 +155,13 @@
 {
     // Navigation logic may go here, for example:
     // Create the next view controller.
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+    WHQuestionViewController *detailViewController = [[WHQuestionViewController alloc] init];
 
     // Pass the selected object to the new view controller.
-    
+    [detailViewController setQuestion:[results objectAtIndex:indexPath.row]];
     // Push the view controller.
     [self.navigationController pushViewController:detailViewController animated:YES];
 }
  
- */
 
 @end

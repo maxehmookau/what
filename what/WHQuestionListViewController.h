@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WHQuestionViewController.h"
 
 @interface WHQuestionListViewController : UITableViewController <UIAlertViewDelegate>
 {

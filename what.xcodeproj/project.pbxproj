@@ -28,6 +28,10 @@
 		4D3E1C78178C963700A3FDDE /* WHQuestionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D3E1C75178C963700A3FDDE /* WHQuestionListViewController.m */; };
 		4D3E1C79178C963700A3FDDE /* WHQuestionListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D3E1C76178C963700A3FDDE /* WHQuestionListViewController.xib */; };
 		4D3E1C7A178C963700A3FDDE /* WHQuestionListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D3E1C76178C963700A3FDDE /* WHQuestionListViewController.xib */; };
+		4D3E1C7E178CA51400A3FDDE /* WHQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D3E1C7C178CA51400A3FDDE /* WHQuestionViewController.m */; };
+		4D3E1C7F178CA51400A3FDDE /* WHQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D3E1C7C178CA51400A3FDDE /* WHQuestionViewController.m */; };
+		4D3E1C80178CA51400A3FDDE /* WHQuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D3E1C7D178CA51400A3FDDE /* WHQuestionViewController.xib */; };
+		4D3E1C81178CA51400A3FDDE /* WHQuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D3E1C7D178CA51400A3FDDE /* WHQuestionViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +68,9 @@
 		4D3E1C74178C963700A3FDDE /* WHQuestionListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHQuestionListViewController.h; sourceTree = "<group>"; };
 		4D3E1C75178C963700A3FDDE /* WHQuestionListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHQuestionListViewController.m; sourceTree = "<group>"; };
 		4D3E1C76178C963700A3FDDE /* WHQuestionListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WHQuestionListViewController.xib; sourceTree = "<group>"; };
+		4D3E1C7B178CA51400A3FDDE /* WHQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHQuestionViewController.h; sourceTree = "<group>"; };
+		4D3E1C7C178CA51400A3FDDE /* WHQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHQuestionViewController.m; sourceTree = "<group>"; };
+		4D3E1C7D178CA51400A3FDDE /* WHQuestionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WHQuestionViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +142,9 @@
 				4D3E1C74178C963700A3FDDE /* WHQuestionListViewController.h */,
 				4D3E1C75178C963700A3FDDE /* WHQuestionListViewController.m */,
 				4D3E1C76178C963700A3FDDE /* WHQuestionListViewController.xib */,
+				4D3E1C7B178CA51400A3FDDE /* WHQuestionViewController.h */,
+				4D3E1C7C178CA51400A3FDDE /* WHQuestionViewController.m */,
+				4D3E1C7D178CA51400A3FDDE /* WHQuestionViewController.xib */,
 				4D3E1C3D178C94DD00A3FDDE /* Supporting Files */,
 			);
 			path = what;
@@ -248,6 +258,7 @@
 				4D3E1C79178C963700A3FDDE /* WHQuestionListViewController.xib in Resources */,
 				4D3E1C41178C94DD00A3FDDE /* InfoPlist.strings in Resources */,
 				4D3E1C4C178C94DD00A3FDDE /* Images.xcassets in Resources */,
+				4D3E1C80178CA51400A3FDDE /* WHQuestionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D3E1C7A178C963700A3FDDE /* WHQuestionListViewController.xib in Resources */,
+				4D3E1C81178CA51400A3FDDE /* WHQuestionViewController.xib in Resources */,
 				4D3E1C5E178C94DE00A3FDDE /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,6 +282,7 @@
 				4D3E1C77178C963700A3FDDE /* WHQuestionListViewController.m in Sources */,
 				4D3E1C4A178C94DD00A3FDDE /* what.xcdatamodeld in Sources */,
 				4D3E1C6B178C955000A3FDDE /* Question.m in Sources */,
+				4D3E1C7E178CA51400A3FDDE /* WHQuestionViewController.m in Sources */,
 				4D3E1C43178C94DD00A3FDDE /* main.m in Sources */,
 				4D3E1C47178C94DD00A3FDDE /* WHAppDelegate.m in Sources */,
 			);
@@ -282,6 +295,7 @@
 				4D3E1C60178C94DE00A3FDDE /* whatTests.m in Sources */,
 				4D3E1C78178C963700A3FDDE /* WHQuestionListViewController.m in Sources */,
 				4D3E1C6C178C955000A3FDDE /* Question.m in Sources */,
+				4D3E1C7F178CA51400A3FDDE /* WHQuestionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
