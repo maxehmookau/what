@@ -7,6 +7,8 @@
 //
 
 #import "WHAppDelegate.h"
+#import "WHQuestionListViewController.h"
+#import "Question.h"
 
 @implementation WHAppDelegate
 
@@ -16,9 +18,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+
+//    NSEntityDescription *ds = [NSEntityDescription entityForName:@"Question" inManagedObjectContext:[self managedObjectContext]];
+//    
+//    Question *question = [[Question alloc ] initWithEntity:ds insertIntoManagedObjectContext:[self managedObjectContext]];
+//    [question setQuestion:@"Did you have fun today?"];
+//    [[self managedObjectContext] save:nil];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+    WHQuestionListViewController *rootVC = [WHQuestionListViewController new];
+    self.window.rootViewController = rootVC;
     [self.window makeKeyAndVisible];
     return YES;
 }

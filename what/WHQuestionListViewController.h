@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WHQuestionListViewController : UIViewController
+@interface WHQuestionListViewController : UITableViewController
 
 @end
