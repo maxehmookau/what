@@ -28,7 +28,9 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     WHQuestionListViewController *rootVC = [WHQuestionListViewController new];
-    self.window.rootViewController = rootVC;
+    [rootVC setTitle:@"Questions"];
+    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:rootVC];
+    self.window.rootViewController = nc;
     [self.window makeKeyAndVisible];
     return YES;
 }

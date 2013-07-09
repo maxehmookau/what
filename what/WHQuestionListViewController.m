@@ -8,6 +8,7 @@
 
 #import "WHQuestionListViewController.h"
 #import "WHAppDelegate.h"
+#import "Question.h"
 
 @interface WHQuestionListViewController ()
 
@@ -27,25 +28,53 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    NSFetchRequest *req = [NSFetchRequest new];
     WHAppDelegate *delegate = [[UIApplication sharedApplication] delegate];
     NSManagedObjectContext *moc = [delegate managedObjectContext];
     NSEntityDescription *desc = [NSEntityDescription entityForName:@"Question" inManagedObjectContext:moc];
-    NSFetchRequest *req = [NSFetchRequest new];
     [req setEntity:desc];
-    NSArray *results = [moc executeFetchRequest:req error:nil];
-    NSLog(@"%@", results);
+    results = [[moc executeFetchRequest:req error:nil] mutableCopy];
 
     // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    //self.clearsSelectionOnViewWillAppear = NO;
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+                                                                               target:self
+                                                                               action:@selector(promptForNewQuestion)];
+    [self.navigationItem setRightBarButtonItem:addButton];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)promptForNewQuestion
+{
+    UIAlertView *questionInput = [UIAlertView new];
+    [questionInput setAlertViewStyle: UIAlertViewStylePlainTextInput];
+    [questionInput setTitle:@"New Question"];
+    [questionInput addButtonWithTitle:@"Cancel"];
+    [questionInput addButtonWithTitle:@"Add"];
+    [questionInput setCancelButtonIndex:0];
+    [questionInput show];
+    [questionInput setDelegate:self];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    
+    if (buttonIndex == 1) {
+        WHAppDelegate *delegate = [[UIApplication sharedApplication] delegate];
+        NSManagedObjectContext *moc = [delegate managedObjectContext];
+        NSEntityDescription *desc = [NSEntityDescription entityForName:@"Question" inManagedObjectContext:moc];
+        Question *question = [[Question alloc] initWithEntity:desc insertIntoManagedObjectContext:moc];
+        [question setQuestion:[[alertView textFieldAtIndex:0] text]];
+        [results addObject:question];
+        [self.tableView reloadData];
+        [moc save:nil];
+    }
 }
 
 #pragma mark - Table view data source
@@ -59,7 +88,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 0;
+    return [results count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -70,9 +99,15 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    // Configure the cell...
+    [[cell textLabel] setText:[[results objectAtIndex:indexPath.row] question]];
+    [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
     
     return cell;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return @"Questions";
 }
 
 /*
@@ -84,19 +119,22 @@
 }
 */
 
-/*
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
+        WHAppDelegate *delegate = [[UIApplication sharedApplication] delegate];
+        NSManagedObjectContext *moc = [delegate managedObjectContext];
+        [moc deleteObject:[results objectAtIndex:indexPath.row]];
+        [results removeObjectAtIndex:indexPath.row];
+        [moc save:nil];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }   
     else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
-*/
 
 /*
 // Override to support rearranging the table view.

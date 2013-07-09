@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WHQuestionListViewController : UITableViewController
+@interface WHQuestionListViewController : UITableViewController <UIAlertViewDelegate>
+{
+    NSMutableArray *results;
+}
 
+- (void)promptForNewQuestion;
 @end
