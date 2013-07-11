@@ -27,6 +27,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [_questionLbl setText:[_question question]];
 }
 
 - (void)didReceiveMemoryWarning

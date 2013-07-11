@@ -12,5 +12,6 @@
 @interface WHQuestionViewController : UIViewController
 
 @property (nonatomic) Question *question;
+@property (nonatomic) IBOutlet UILabel *questionLbl;
 
 @end
