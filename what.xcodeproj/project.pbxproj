@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D08D104178F2569003564A8 /* FUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D08D103178F2569003564A8 /* FUIButton.m */; };
+		4D08D105178F2569003564A8 /* FUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D08D103178F2569003564A8 /* FUIButton.m */; };
+		4D08D108178F25D1003564A8 /* UIImage+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D08D107178F25D1003564A8 /* UIImage+FlatUI.m */; };
+		4D08D109178F25D1003564A8 /* UIImage+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D08D107178F25D1003564A8 /* UIImage+FlatUI.m */; };
+		4D08D10C178F2622003564A8 /* UIFont+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D08D10B178F2622003564A8 /* UIFont+FlatUI.m */; };
+		4D08D10D178F2622003564A8 /* UIFont+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D08D10B178F2622003564A8 /* UIFont+FlatUI.m */; };
+		4D08D110178F2637003564A8 /* UIColor+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D08D10F178F2637003564A8 /* UIColor+FlatUI.m */; };
+		4D08D111178F2637003564A8 /* UIColor+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D08D10F178F2637003564A8 /* UIColor+FlatUI.m */; };
+		4D08D113178F495D003564A8 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 4D08D112178F495D003564A8 /* Podfile */; };
+		4D08D114178F495D003564A8 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 4D08D112178F495D003564A8 /* Podfile */; };
 		4D3E1C35178C94DD00A3FDDE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D3E1C34178C94DD00A3FDDE /* Foundation.framework */; };
 		4D3E1C37178C94DD00A3FDDE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D3E1C36178C94DD00A3FDDE /* CoreGraphics.framework */; };
 		4D3E1C39178C94DD00A3FDDE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D3E1C38178C94DD00A3FDDE /* UIKit.framework */; };
@@ -45,6 +55,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D08D102178F2569003564A8 /* FUIButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUIButton.h; sourceTree = "<group>"; };
+		4D08D103178F2569003564A8 /* FUIButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUIButton.m; sourceTree = "<group>"; };
+		4D08D106178F25D1003564A8 /* UIImage+FlatUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FlatUI.h"; sourceTree = "<group>"; };
+		4D08D107178F25D1003564A8 /* UIImage+FlatUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FlatUI.m"; sourceTree = "<group>"; };
+		4D08D10A178F2622003564A8 /* UIFont+FlatUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+FlatUI.h"; sourceTree = "<group>"; };
+		4D08D10B178F2622003564A8 /* UIFont+FlatUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+FlatUI.m"; sourceTree = "<group>"; };
+		4D08D10E178F2637003564A8 /* UIColor+FlatUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+FlatUI.h"; sourceTree = "<group>"; };
+		4D08D10F178F2637003564A8 /* UIColor+FlatUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+FlatUI.m"; sourceTree = "<group>"; };
+		4D08D112178F495D003564A8 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Podfile; path = what/Podfile; sourceTree = "<group>"; };
 		4D3E1C31178C94DD00A3FDDE /* what.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = what.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D3E1C34178C94DD00A3FDDE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4D3E1C36178C94DD00A3FDDE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -71,6 +90,7 @@
 		4D3E1C7B178CA51400A3FDDE /* WHQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHQuestionViewController.h; sourceTree = "<group>"; };
 		4D3E1C7C178CA51400A3FDDE /* WHQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHQuestionViewController.m; sourceTree = "<group>"; };
 		4D3E1C7D178CA51400A3FDDE /* WHQuestionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WHQuestionViewController.xib; sourceTree = "<group>"; };
+		4D9E13D617908F0B00141584 /* what.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = what.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +122,7 @@
 		4D3E1C28178C94DD00A3FDDE = {
 			isa = PBXGroup;
 			children = (
+				4D08D112178F495D003564A8 /* Podfile */,
 				4D3E1C3C178C94DD00A3FDDE /* what */,
 				4D3E1C59178C94DE00A3FDDE /* whatTests */,
 				4D3E1C33178C94DD00A3FDDE /* Frameworks */,
@@ -133,6 +154,15 @@
 		4D3E1C3C178C94DD00A3FDDE /* what */ = {
 			isa = PBXGroup;
 			children = (
+				4D9E13D617908F0B00141584 /* what.entitlements */,
+				4D08D10E178F2637003564A8 /* UIColor+FlatUI.h */,
+				4D08D10F178F2637003564A8 /* UIColor+FlatUI.m */,
+				4D08D10A178F2622003564A8 /* UIFont+FlatUI.h */,
+				4D08D10B178F2622003564A8 /* UIFont+FlatUI.m */,
+				4D08D102178F2569003564A8 /* FUIButton.h */,
+				4D08D103178F2569003564A8 /* FUIButton.m */,
+				4D08D106178F25D1003564A8 /* UIImage+FlatUI.h */,
+				4D08D107178F25D1003564A8 /* UIImage+FlatUI.m */,
 				4D3E1C45178C94DD00A3FDDE /* WHAppDelegate.h */,
 				4D3E1C46178C94DD00A3FDDE /* WHAppDelegate.m */,
 				4D3E1C4B178C94DD00A3FDDE /* Images.xcassets */,
@@ -227,6 +257,14 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = maxwoolf;
 				TargetAttributes = {
+					4D3E1C30178C94DD00A3FDDE = {
+						DevelopmentTeam = 3U7846JR84;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
+					};
 					4D3E1C50178C94DE00A3FDDE = {
 						TestTargetID = 4D3E1C30178C94DD00A3FDDE;
 					};
@@ -255,6 +293,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D08D113178F495D003564A8 /* Podfile in Resources */,
 				4D3E1C79178C963700A3FDDE /* WHQuestionListViewController.xib in Resources */,
 				4D3E1C41178C94DD00A3FDDE /* InfoPlist.strings in Resources */,
 				4D3E1C4C178C94DD00A3FDDE /* Images.xcassets in Resources */,
@@ -268,6 +307,7 @@
 			files = (
 				4D3E1C7A178C963700A3FDDE /* WHQuestionListViewController.xib in Resources */,
 				4D3E1C81178CA51400A3FDDE /* WHQuestionViewController.xib in Resources */,
+				4D08D114178F495D003564A8 /* Podfile in Resources */,
 				4D3E1C5E178C94DE00A3FDDE /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,9 +319,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D08D110178F2637003564A8 /* UIColor+FlatUI.m in Sources */,
+				4D08D104178F2569003564A8 /* FUIButton.m in Sources */,
 				4D3E1C77178C963700A3FDDE /* WHQuestionListViewController.m in Sources */,
 				4D3E1C4A178C94DD00A3FDDE /* what.xcdatamodeld in Sources */,
 				4D3E1C6B178C955000A3FDDE /* Question.m in Sources */,
+				4D08D108178F25D1003564A8 /* UIImage+FlatUI.m in Sources */,
+				4D08D10C178F2622003564A8 /* UIFont+FlatUI.m in Sources */,
 				4D3E1C7E178CA51400A3FDDE /* WHQuestionViewController.m in Sources */,
 				4D3E1C43178C94DD00A3FDDE /* main.m in Sources */,
 				4D3E1C47178C94DD00A3FDDE /* WHAppDelegate.m in Sources */,
@@ -292,10 +336,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D08D111178F2637003564A8 /* UIColor+FlatUI.m in Sources */,
+				4D08D109178F25D1003564A8 /* UIImage+FlatUI.m in Sources */,
+				4D08D10D178F2622003564A8 /* UIFont+FlatUI.m in Sources */,
 				4D3E1C60178C94DE00A3FDDE /* whatTests.m in Sources */,
 				4D3E1C78178C963700A3FDDE /* WHQuestionListViewController.m in Sources */,
 				4D3E1C6C178C955000A3FDDE /* Question.m in Sources */,
 				4D3E1C7F178CA51400A3FDDE /* WHQuestionViewController.m in Sources */,
+				4D08D105178F2569003564A8 /* FUIButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +450,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = what/what.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "what/what-Prefix.pch";
 				INFOPLIST_FILE = "what/what-Info.plist";
@@ -415,6 +465,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = what/what.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "what/what-Prefix.pch";
 				INFOPLIST_FILE = "what/what-Info.plist";
@@ -482,6 +534,7 @@
 				4D3E1C65178C94DE00A3FDDE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4D3E1C66178C94DE00A3FDDE /* Build configuration list for PBXNativeTarget "whatTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +543,7 @@
 				4D3E1C68178C94DE00A3FDDE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

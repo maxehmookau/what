@@ -16,4 +16,6 @@
 @property (nonatomic, retain) NSNumber * no;
 @property (nonatomic, retain) NSString * question;
 
+- (NSString *)stringRepresentation;
+
 @end

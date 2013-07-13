@@ -15,4 +15,8 @@
 @dynamic no;
 @dynamic question;
 
+- (NSString *)stringRepresentation
+{
+    return [NSString stringWithFormat:@"Question: %@\nYes: %@\nNo: %@", [self question], [self yes], [self no]];
+}
 @end

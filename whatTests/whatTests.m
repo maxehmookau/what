@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "Question.h"
 
 @interface whatTests : XCTestCase
 
@@ -28,9 +29,9 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testJSONRepresentationReturnsJSON
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    
 }
 
 @end

@@ -8,6 +8,7 @@
 
 #import "WHQuestionListViewController.h"
 #import "WHQuestionViewController.h"
+#import "UIFont+FlatUI.h"
 #import "WHAppDelegate.h"
 #import "Question.h"
 
@@ -32,10 +33,12 @@
     
     NSFetchRequest *req = [NSFetchRequest new];
     WHAppDelegate *delegate = [[UIApplication sharedApplication] delegate];
-    NSManagedObjectContext *moc = [delegate managedObjectContext];
+    NSManagedObjectContext *
+    moc = [delegate managedObjectContext];
     NSEntityDescription *desc = [NSEntityDescription entityForName:@"Question" inManagedObjectContext:moc];
     [req setEntity:desc];
-    results = [[moc executeFetchRequest:req error:nil] mutableCopy];
+    results = [[moc executeFetchRequest:req
+                                  error:nil] mutableCopy];
 
     // Uncomment the following line to preserve selection between presentations.
     //self.clearsSelectionOnViewWillAppear = NO;
@@ -43,6 +46,12 @@
                                                                                target:self
                                                                                action:@selector(promptForNewQuestion)];
     [self.navigationItem setRightBarButtonItem:addButton];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self.navigationController.navigationBar setHidden:NO];
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -56,6 +65,7 @@
     UIAlertView *questionInput = [UIAlertView new];
     [questionInput setAlertViewStyle: UIAlertViewStylePlainTextInput];
     [questionInput setTitle:@"New Question"];
+    
     [questionInput addButtonWithTitle:@"Cancel"];
     [questionInput addButtonWithTitle:@"Add"];
     [questionInput setCancelButtonIndex:0];
@@ -69,8 +79,12 @@
     if (buttonIndex == 1) {
         WHAppDelegate *delegate = [[UIApplication sharedApplication] delegate];
         NSManagedObjectContext *moc = [delegate managedObjectContext];
-        NSEntityDescription *desc = [NSEntityDescription entityForName:@"Question" inManagedObjectContext:moc];
-        Question *question = [[Question alloc] initWithEntity:desc insertIntoManagedObjectContext:moc];
+        NSEntityDescription *desc = [NSEntityDescription entityForName:@"Question"
+                                                inManagedObjectContext:moc];
+        
+        Question *question = [[Question alloc] initWithEntity:desc
+                               insertIntoManagedObjectContext:moc];
+        
         [question setQuestion:[[alertView textFieldAtIndex:0] text]];
         [results addObject:question];
         [self.tableView reloadData];
@@ -97,11 +111,17 @@
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
+                                      reuseIdentifier:CellIdentifier];
     }
     
     [[cell textLabel] setText:[[results objectAtIndex:indexPath.row] question]];
+    [[cell textLabel] setMinimumScaleFactor:0.1];
     [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+    NSNumber *yesVotes = [[results objectAtIndex:indexPath.row] yes];
+    NSNumber *noVotes = [[results objectAtIndex:indexPath.row] no];
+    NSString *subtitle = [NSString stringWithFormat:@"Yes: %@         No: %@", yesVotes, noVotes];
+    [[cell detailTextLabel] setText:subtitle];
     
     return cell;
 }
@@ -124,7 +144,8 @@
         [moc deleteObject:[results objectAtIndex:indexPath.row]];
         [results removeObjectAtIndex:indexPath.row];
         [moc save:nil];
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        [tableView deleteRowsAtIndexPaths:@[indexPath]
+                         withRowAnimation:UITableViewRowAnimationFade];
     }   
     else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
